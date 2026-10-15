@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.material3.Divider
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
@@ -79,3 +80,15 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             thickness = dimensionResource(id = R.dimen.divider_tipis),
             color = Color.DarkGray
         )
+        Button(
+            modifier = Modifier.fillMaxWidth(fraction = 1f),
+            // the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }
+        ) {
+            Text(stringResource(R.string.submit))
+        }
