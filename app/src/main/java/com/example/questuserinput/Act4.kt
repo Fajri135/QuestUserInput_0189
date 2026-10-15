@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Alignment
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.material3.Divider
 
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
@@ -59,3 +62,12 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 }
             }
         }
+        OutlinedTextField(
+            value = textAlamat,
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = { Text("Alamat") },
+            onValueChange = {
+                textAlamat = it
+            }
+        )
