@@ -15,6 +15,10 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.material3.Divider
 import androidx.compose.ui.res.stringResource
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.CardDefaults
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
@@ -91,4 +95,14 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         ) {
             Text(stringResource(R.string.submit))
+        }
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.Black),
+            modifier = Modifier
+                .height(100.dp)
+                .width(300.dp)
+        ){
+
+        }
         }
