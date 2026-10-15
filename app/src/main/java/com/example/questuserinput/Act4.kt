@@ -42,7 +42,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     var jenis by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.padding(top = 50.dp),
+        modifier = modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -84,10 +84,10 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 textAlamat = it
             }
         )
-        Divider(
+        HorizontalDivider(
             modifier = Modifier.padding(
-            bottom = dimensionResource(id = R.dimen.padding_medium),
-            top = dimensionResource(id = R.dimen.padding_medium)
+                bottom = dimensionResource(id = R.dimen.padding_medium),
+                top = dimensionResource(id = R.dimen.padding_medium)
             ),
             thickness = dimensionResource(id = R.dimen.divider_tipis),
             color = Color.DarkGray
@@ -110,10 +110,12 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .height(100.dp)
                 .width(300.dp)
-        ){
-            Column (modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)){
-            Text(text = "Nama : " +nama, color = Color.White )
-            Text(text = "Gender : "+jenis, color = Color.White )
-            Text(text = "Alamat : "+alamat, color = Color.White)
+        ) {
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)) {
+                Text(text = "Nama : " + nama, color = Color.White)
+                Text(text = "Gender : " + jenis, color = Color.White)
+                Text(text = "Alamat : " + alamat, color = Color.White)
             }
         }
+    }
+}
